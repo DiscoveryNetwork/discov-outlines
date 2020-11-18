@@ -9,7 +9,7 @@ public class ChatUtil {
     public static void sendMessage(CommandSender sender, String msg, boolean withPrefix) {
         if (withPrefix) {
             String prefix = DiscovOutlines.getInstance().getConfig().getString("prefix");
-            msg = ChatColor.translateAlternateColorCodes('&', prefix) + " " + msg;
+            msg = ChatColor.translateAlternateColorCodes('&', prefix) + msg;
         }
         sender.sendMessage(msg);
     }
