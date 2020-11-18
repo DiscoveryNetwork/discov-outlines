@@ -83,7 +83,6 @@ public class OutlinesCommandExecutor implements TabExecutor {
             if (args[0].equalsIgnoreCase("place") && args.length == 3) {
                 if (DiscovOutlines.getInstance().getSelectionManager().hasSelection(player)) {
                     Location pointLocation = DiscovOutlines.getInstance().getSelectionManager().getSelection(player).getLocation();
-                    ChatUtil.sendMessage(player, "Reference point: " + pointLocation.toString(), true);
 
                     double length = Double.parseDouble(args[1]);
                     double heading = Double.parseDouble(args[2]);
@@ -97,8 +96,8 @@ public class OutlinesCommandExecutor implements TabExecutor {
                     int changeZ = (int) postRoundZ;
 
                     Location block = new Location(pointLocation.getWorld(), (pointLocation.getX() + changeX), pointLocation.getY(), (pointLocation.getZ() - changeZ));
-                    ChatUtil.sendMessage(player, "Block location: " + block.toString(), true);
                     block.getBlock().setType(Material.GOLD_BLOCK);
+                    ChatUtil.sendMessage(player, "§7Placed block at: §3" + block.getBlockX() + " " + block.getBlockY() + " " + block.getBlockZ(), false);
                 } else {
                     ChatUtil.sendMessage(player, "§cYou don't have a reference point selected!", true);
                 }
