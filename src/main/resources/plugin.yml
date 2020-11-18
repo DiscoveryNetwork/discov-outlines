@@ -1,0 +1,15 @@
+main: nl.parrotlync.discovoutlines.DiscovOutlines
+name: DiscovOutlines
+version: 1.0
+description: Outlines plugin for the Discovery Network
+api-version: 1.12
+author: ParrotLync
+commands:
+  outlines:
+    description: Main DiscovOutlines command
+    usage: /outlines
+    aliases: [o]
+permissions:
+  discovoutlines.use:
+    default: op
+    description: Use DiscovOutlines
