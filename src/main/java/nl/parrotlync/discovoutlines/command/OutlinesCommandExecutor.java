@@ -95,9 +95,9 @@ public class OutlinesCommandExecutor implements TabExecutor {
                     int changeX = (int) postRoundX;
                     int changeZ = (int) postRoundZ;
 
-                    Location block = new Location(pointLocation.getWorld(), (pointLocation.getX() + changeX), pointLocation.getY(), (pointLocation.getZ() - changeZ));
+                    Location block = new Location(pointLocation.getWorld(), (pointLocation.getX() + changeX), player.getLocation().getY(), (pointLocation.getZ() - changeZ));
                     block.getBlock().setType(Material.GOLD_BLOCK);
-                    ChatUtil.sendMessage(player, "§7Placed block at: §3" + block.getBlockX() + " " + block.getBlockY() + " " + block.getBlockZ(), false);
+                    ChatUtil.sendMessage(player, "§7Placed block at: §3" + block.getBlockX() + " " + player.getLocation().getBlockY() + " " + block.getBlockZ(), false);
                 } else {
                     ChatUtil.sendMessage(player, "§cYou don't have a reference point selected!", true);
                 }
