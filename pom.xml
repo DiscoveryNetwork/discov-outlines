@@ -5,7 +5,7 @@
 
     <groupId>nl.parrotlync</groupId>
     <artifactId>DiscovOutlines</artifactId>
-    <version>v1.1${revision}</version>
+    <version>1.1${revision}</version>
 
     <properties>
         <revision>-SNAPSHOT</revision>
@@ -19,6 +19,14 @@
                 <configuration>
                     <source>7</source>
                     <target>7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -48,7 +56,7 @@
         <dependency>
             <groupId>com.gmail.filoghost.holographicdisplays</groupId>
             <artifactId>holographicdisplays-api</artifactId>
-            <version>2.3.0</version>
+            <version>2.3.2</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
