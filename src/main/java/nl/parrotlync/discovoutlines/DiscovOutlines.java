@@ -19,7 +19,7 @@ public class DiscovOutlines extends JavaPlugin {
     @Override
     public void onEnable() {
         saveDefaultConfig();
-        referenceManager.load();
+        getServer().getScheduler().runTask(this, referenceManager::load);
         getCommand("outlines").setExecutor(new OutlinesCommandExecutor());
         getLogger().info("DiscovOutlines is now enabled!");
     }
