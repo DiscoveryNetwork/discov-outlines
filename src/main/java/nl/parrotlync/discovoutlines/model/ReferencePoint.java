@@ -1,5 +1,8 @@
 package nl.parrotlync.discovoutlines.model;
 
+import com.gmail.filoghost.holographicdisplays.api.Hologram;
+import com.gmail.filoghost.holographicdisplays.api.HologramsAPI;
+import nl.parrotlync.discovoutlines.DiscovOutlines;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;

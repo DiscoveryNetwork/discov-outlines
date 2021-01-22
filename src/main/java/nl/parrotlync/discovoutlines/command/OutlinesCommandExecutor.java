@@ -1,5 +1,6 @@
 package nl.parrotlync.discovoutlines.command;
 
+import com.gmail.filoghost.holographicdisplays.api.HologramsAPI;
 import nl.parrotlync.discovoutlines.DiscovOutlines;
 import nl.parrotlync.discovoutlines.model.ReferencePoint;
 import nl.parrotlync.discovoutlines.util.ChatUtil;
@@ -8,6 +9,8 @@ import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
+import org.bukkit.entity.ArmorStand;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.util.StringUtil;
 
