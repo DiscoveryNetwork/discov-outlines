@@ -9,6 +9,7 @@ import nl.parrotlync.discovoutlines.model.ReferencePoint;
 import nl.parrotlync.discovoutlines.util.DataUtil;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 import java.util.HashMap;
