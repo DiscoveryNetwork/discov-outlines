@@ -5,6 +5,8 @@ import nl.parrotlync.discovoutlines.manager.ReferenceManager;
 import nl.parrotlync.discovoutlines.manager.SelectionManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Objects;
+
 public class DiscovOutlines extends JavaPlugin {
     private static DiscovOutlines instance;
     private final ReferenceManager referenceManager;
@@ -20,7 +22,7 @@ public class DiscovOutlines extends JavaPlugin {
     public void onEnable() {
         saveDefaultConfig();
         getServer().getScheduler().runTask(this, referenceManager::load);
-        getCommand("outlines").setExecutor(new OutlinesCommandExecutor());
+        Objects.requireNonNull(getCommand("outlines")).setExecutor(new OutlinesCommandExecutor());
         getLogger().info("DiscovOutlines is now enabled!");
     }
 

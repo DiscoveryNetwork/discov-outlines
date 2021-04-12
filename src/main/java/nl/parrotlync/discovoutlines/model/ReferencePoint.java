@@ -5,6 +5,7 @@ import org.bukkit.Location;
 import org.bukkit.World;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class ReferencePoint implements Serializable {
     private final String name;
@@ -18,7 +19,7 @@ public class ReferencePoint implements Serializable {
         this.x = location.getX();
         this.y = location.getY();
         this.z = location.getZ();
-        this.world = location.getWorld().getName();
+        this.world = Objects.requireNonNull(location.getWorld()).getName();
     }
 
     public String getName() {

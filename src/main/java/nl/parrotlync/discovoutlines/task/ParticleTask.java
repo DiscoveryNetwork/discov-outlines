@@ -1,8 +1,6 @@
 package nl.parrotlync.discovoutlines.task;
 
-import nl.parrotlync.discovoutlines.DiscovOutlines;
 import nl.parrotlync.discovoutlines.model.ReferencePoint;
-import org.bukkit.Bukkit;
 import org.bukkit.Particle;
 import org.bukkit.entity.Player;
 

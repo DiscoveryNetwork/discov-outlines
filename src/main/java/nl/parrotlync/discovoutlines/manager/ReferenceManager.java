@@ -6,12 +6,9 @@ import com.gmail.filoghost.holographicdisplays.api.handler.TouchHandler;
 import com.gmail.filoghost.holographicdisplays.api.line.TextLine;
 import nl.parrotlync.discovoutlines.DiscovOutlines;
 import nl.parrotlync.discovoutlines.model.ReferencePoint;
-import nl.parrotlync.discovoutlines.util.ChatUtil;
 import nl.parrotlync.discovoutlines.util.DataUtil;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -75,18 +72,6 @@ public class ReferenceManager {
     private void removeHologram(ReferencePoint point) {
         holograms.get(point.getName().toLowerCase()).delete();
         holograms.remove(point.getName().toLowerCase());
-    }
-
-    public void showHolograms(Player player) {
-        for (Hologram hologram : holograms.values()) {
-            hologram.getVisibilityManager().showTo(player);
-        }
-    }
-
-    public void hideHolograms(Player player) {
-        for (Hologram hologram : holograms.values()) {
-            hologram.getVisibilityManager().hideTo(player);
-        }
     }
 
     private TouchHandler getTouchHandler(Hologram hologram) {
