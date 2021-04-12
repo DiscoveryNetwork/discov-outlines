@@ -73,6 +73,18 @@ public class ReferenceManager {
         holograms.get(point.getName().toLowerCase()).delete();
         holograms.remove(point.getName().toLowerCase());
     }
+    
+    public void showHolograms(Player player) {
+        for (Hologram hologram : holograms.values()) {
+            hologram.getVisibilityManager().showTo(player);
+        }
+    }
+
+    public void hideHolograms(Player player) {
+        for (Hologram hologram : holograms.values()) {
+            hologram.getVisibilityManager().hideTo(player);
+        }
+    }
 
     private TouchHandler getTouchHandler(Hologram hologram) {
         return player -> {
