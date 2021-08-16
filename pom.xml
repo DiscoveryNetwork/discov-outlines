@@ -9,20 +9,12 @@
     <description>Outlines plugin for Discov Network</description>
 
     <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <revision>-SNAPSHOT</revision>
     </properties>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                </configuration>
-            </plugin>
-        </plugins>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -33,15 +25,15 @@
 
     <distributionManagement>
         <repository>
-            <id>nexus-releases</id>
-            <url>https://nexus.ipictserver.nl/repository/maven-releases/</url>
+            <id>nexus-discov</id>
+            <url>https://nexus.discov.network/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
 
     <repositories>
         <repository>
-            <id>nexus-releases</id>
-            <url>https://nexus.ipictserver.nl/repository/maven-group/</url>
+            <id>nexus-discov</id>
+            <url>https://nexus.discov.network/repository/maven-group/</url>
         </repository>
     </repositories>
 
